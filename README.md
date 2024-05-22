@@ -3,6 +3,8 @@
 
 This project is in development...
 
+Made in Python by [Abhinav2011VS](https://github.com/Abhinav2011VS)
+
 Designed to make a maximum closest clone of Minecraft running on the web **(CURRENTLY ONLY SUPPORTS SINGLEPLAYER!)**
 
 **MAKE SURE TO HAVE PYTHON INSTALLED BEFORE HAND. (ONLY IN CASE OF EDITING CODE OR VIEWING AND TESTING CODE)**
