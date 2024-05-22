@@ -4,6 +4,8 @@ Welcome to **Minecraft On the Web**! This project brings the beloved game of Min
 
 [Visit The Website Now! Click Here](https://mc-otw.pages.dev)
 
+**Opening the Minecraft On The Web website for the first time takes a bit more time to load the libraries and running the main engine to create the world and loading it...**
+
 ![Minecraft On the Web](https://mc-otw.pages.dev/path/to/screenshot.png)
 
 ## ✨ Features
@@ -23,7 +25,7 @@ Follow these steps to clone and run the project locally:
 
 Make sure you have Python installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
 
-### Installation
+### Installation ONLY FOR EDITING/VIEWING SOURCE CODE
 
 1. **Clone this repository** to your local machine:
 
@@ -49,3 +51,14 @@ To launch the web client, run the following command:
 
 ```bash
 python main.py
+```
+
+OR
+
+**RECOMMENDED!**
+1. Open Python IDLE (Any version above 3.10)
+2. Click File
+3. Click Open
+4. Go to where the main.py is located.
+5. Open it on the IDLE
+6. Run it by using `Fn + F5`, `F5` Or using the Run Module Button.

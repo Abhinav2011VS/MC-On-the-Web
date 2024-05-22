@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft On the Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2196f3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            background: #e3f2fd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 calc(33% - 20px);
+            text-align: center;
+        }
+        .feature i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .feature h3 {
+            margin-top: 0;
+        }
+        .code {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .collapsible {
+            background: #2196f3;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #2196f3;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Minecraft On the Web</h1>
+    <p>Dive into the blocky world of creativity, survival, and adventure, right from your browser!</p>
+</header>
+
+<div class="container">
+    <h2>✨ Features</h2>
+    <div class="features">
+        <div class="feature">
+            <i class="fas fa-globe"></i>
+            <h3>Explore</h3>
+            <p>Endless worlds generated on-the-fly.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-tools"></i>
+            <h3>Build</h3>
+            <p>Mine, craft, and survive just like in the original game.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-users"></i>
+            <h3>Multiplayer</h3>
+            <p>Support for collaborative building and exploration.</p>
+        </div>
+    </div>
+
+    <h2>🚀 Getting Started</h2>
+    <button class="collapsible">Show Instructions</button>
+    <div class="content">
+        <p>Follow these steps to clone and run the project locally:</p>
+        <div class="code">
+            <pre><code>
+git clone https://github.com/Abhinav2011VS/MC-On-the-Web.git
+cd MC-On-the-Web
+pip install pyglet nbtlib base36 pyglm
+python server.py
+            </code></pre>
+        </div>
+        <p>Once the server is running, open your web browser and navigate to <code>http://localhost:8000</code> to access Minecraft On the Web.</p>
+    </div>
+
+    <h2>🤝 Contributing</h2>
+    <p>We welcome contributions from the community! If you'd like to contribute to this project, please follow these steps:</p>
+    <button class="collapsible">Show Contribution Guide</button>
+    <div class="content">
+        <p>1. Fork this repository and clone it to your local machine.</p>
+        <p>2. Create a new branch for your feature or bug fix:</p>
+        <div class="code">
+            <pre><code>git checkout -b feature/my-feature</code></pre>
+        </div>
+        <p>3. Implement your changes and ensure that the code passes all tests.</p>
+        <p>4. Commit your changes and push them to your fork:</p>
+        <div class="code">
+            <pre><code>
+git add .
+git commit -m "Add my awesome feature"
+git push origin feature/my-feature
+            </code></pre>
+        </div>
+        <p>5. Open a pull request on GitHub, and describe the changes you've made.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="social-icons">
+        <a href="https://twitter.com/YourTwitterHandle"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/YourDiscordLink"><i class="fab fa-discord"></i></a>
+        <a href="https://youtube.com/@AIvortx"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>Made with ❤️ by <a href="https://github.com/Abhinav2011VS" style="color: white;">Abhinav VS</a></p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
