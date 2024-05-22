@@ -12,21 +12,30 @@
     
     <!-- PyScript environment configuration -->
     <py-env>
-        - numpy
         - requests
     </py-env>
 
-    <!-- PyScript code block to set up sys.path for other libraries -->
+    <!-- PyScript code block to install NumPy and set up sys.path for other libraries -->
     <py-script>
+        import micropip
         import sys
-        sys.path.append('/libs/pyglet')
-        sys.path.append('/libs/nbtlib')
-        sys.path.append('/libs/base36')
-        sys.path.append('/libs/pyglm')
+
+        async def setup():
+            # Install NumPy
+            await micropip.install("numpy")
+            
+            # Add local libraries to sys.path
+            sys.path.append('./libs/pyglet')
+            sys.path.append('./libs/nbtlib')
+            sys.path.append('./libs/base36')
+            sys.path.append('./libs/pyglm')
+        
+        # Run the setup function
+        await setup()
     </py-script>
 
     <!-- PyScript code block to load and execute main.py -->
     <py-script src="main.py"></py-script>
-    
+
 </body>
 </html>
