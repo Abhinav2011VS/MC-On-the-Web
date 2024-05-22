@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>PyScript Loader Example</h1>
-    
+
     <!-- PyScript environment configuration -->
     <py-env>
         - requests
@@ -19,6 +19,7 @@
     <py-script>
         import micropip
         import sys
+        import asyncio
 
         async def setup():
             # Install NumPy
@@ -29,13 +30,13 @@
             sys.path.append('./libs/nbtlib')
             sys.path.append('./libs/base36')
             sys.path.append('./libs/pyglm')
-        
-        # Run the setup function
-        await setup()
-    </py-script>
 
-    <!-- PyScript code block to load and execute main.py -->
-    <py-script src="main.py"></py-script>
+            # Import and execute main.py
+            import main
+
+        # Schedule the setup coroutine to run
+        asyncio.ensure_future(setup())
+    </py-script>
 
 </body>
 </html>
