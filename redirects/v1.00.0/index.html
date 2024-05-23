@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft V-1.00.0 - Screenshots</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden; /* Prevent background image overflow */
+            background-image: url('/mc/v1..00.0/screenshots/1.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            backdrop-filter: blur(10px); /* Apply blur to the background */
+        }
+
+        #play-btn {
+            width: 250px;
+            height: 60px;
+            cursor: pointer;
+            fill: #fff; /* Text color */
+            stroke: #fff; /* Border color */
+            stroke-width: 2px; /* Border width */
+            border-radius: 10px; /* Rounded corners */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Ensure play button is above the background overlay */
+        }
+
+        a {
+            z-index: 2;
+        }
+
+        #play-text {
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            fill: #fff;
+            margin-left: 10px;
+        }
+
+        #play-icon {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-overlay"></div>
+
+<a href="gen-water.html">
+    <svg id="play-btn" viewBox="0 0 250 60">
+        <rect width="100%" height="100%" fill="#7d0193" rx="10" ry="10"/>
+        <path id="play-icon" d="M20 15v30l24-15z" fill="#fff" transform="translate(20, 0)"/>
+        <text id="play-text" x="100" y="38" fill="#fff">Play Now!</text>
+    </svg>
+</a>
+
+</body>
+</html>

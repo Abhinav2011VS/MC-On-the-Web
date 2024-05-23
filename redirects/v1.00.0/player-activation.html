@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Dirt Block Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('/redirects/dirt.svg');
+            background-size: 200px; /* Adjust the size as needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .loading-text {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: white;            
+        }
+
+        .progress-bar {
+            width: 350px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background-color: #006a00; /* Green color */
+            transition: width 3s linear; /* Transition for smooth filling */
+        }
+        b {
+            align-items: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-text"><b>Activating Player Controls</b></div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    <!-- Your HTML content here -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the progress bar element
+            var progressBar = document.querySelector('.progress');
+
+            // Set the width of the progress bar to 100% in 3 seconds
+            setTimeout(function() {
+                progressBar.style.width = '100%';
+            }, 2500);
+
+            // Redirect to another page after 5 seconds
+            setTimeout(function() {
+                // Redirect to another page after 0.5 seconds following the completion of progress bar animation
+                setTimeout(function() {
+                    window.location.href = '/mc/v1.00.0/index.html';
+                }, 500);
+            }, 5500);
+        });
+    </script>
+</body>
+</html>
