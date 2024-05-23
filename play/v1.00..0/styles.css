@@ -1,0 +1,101 @@
+/* main-styles.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Play section styles */
+.play-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.play-box {
+    border: 2px solid #2196f3; /* Blue */
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.play-box img {
+    vertical-align: middle;
+}
+
+.progress-box {
+    margin-left: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4caf50; /* Green */
+    border-radius: 10px;
+}
+
+/* Options below the Iframe */
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.options img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Container for iframe */
+.iframe-container {
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (iframe video) */
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2196f3; /* Blue */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
