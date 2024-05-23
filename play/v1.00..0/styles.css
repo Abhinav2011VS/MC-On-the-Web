@@ -40,17 +40,6 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.play-box {
-    border: 2px solid #2196f3; /* Blue */
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.play-box img {
-    vertical-align: middle;
-}
-
 .progress-box {
     margin-left: 20px;
 }
@@ -66,6 +55,7 @@ header h1 {
 .options {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .options img {
